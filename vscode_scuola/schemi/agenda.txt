@@ -1,0 +1,12 @@
+AGENDA
+
+Vettore di contatti --> strutture con:
+
+	- Nome --> string
+	- Cognome --> string
+	- Eta --> int
+	- Num. Telefonico --> string
+	- Indirizzo --> string
+	- Num civico --> int
+
+Usa istream e ostream per migliore design
