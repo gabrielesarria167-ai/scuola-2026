@@ -10,3 +10,8 @@ Vettore di contatti --> strutture con:
 	- Num civico --> int
 
 Usa istream e ostream per migliore design
+
+Aggiungi controllo nome e cognome --> se hanno un numero = invalid
+
+	- Ciclo for che controlla i caratteri e se sono maggiori di 0 e minori di 9 danno errore
+	- Auto formattazione nome e cognome --> eg. GabrIeLE --> Gabriele
