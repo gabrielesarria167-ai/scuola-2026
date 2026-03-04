@@ -1,0 +1,25 @@
+body{
+    background-color: #000000;
+    color:#eeee;
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    height: 100vh;
+}
+
+body > *{
+    box-sizing: border-box;
+    border: 2px solid white;
+}
+
+/* LINKS */
+
+.link, .link>a{
+    color: #eeee;
+}
+.link{
+    list-style: none;
+}
+.link>a{
+    text-decoration-line: none;
+}
