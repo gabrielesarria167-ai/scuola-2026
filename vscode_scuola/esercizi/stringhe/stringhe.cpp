@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+// impara <stringh>  --> strcpy(sorgente, destinazione) eg. (strcpy(parola, vettore di parole))
+
 std::string frase;
 int maiuscole = 0;
 int minuscole = 0;

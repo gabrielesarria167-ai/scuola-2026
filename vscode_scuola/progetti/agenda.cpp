@@ -12,6 +12,8 @@ struct Contatto
     int ncivico;
 };
 
+std::vector<Contatto> c;
+
 // FUNZIONI OVERLOAD
 
 std::istream &operator>>(std::istream &in, Contatto &c)
@@ -47,31 +49,7 @@ void displaymenu()
     std::cout << "-------------------------------------\n\n";
     std::cout << "Benvenuto nella tua agenda personale!\n"
               << "\nSeleziona una opzione tra le seguenti:\n\n";
-    std::cout << "1. Crea contatto" << "\n2. Modifica contatto" << "\n3. Visualizza contatti" << "\n4. Elimina contatto" << "\n5. Esci";
-}
-
-void getchoice()
-{
-    while (true)
-    {
-        int n;
-        std::cin >> n;
-        switch (n)
-        {
-        case 1:
-            return;
-        case 2:
-            return;
-        case 3:
-            return;
-        case 4:
-            return;
-        case 5:
-            return;
-        default:
-            std::cout << "\nErrore: Opzione non valida.\n";
-        }
-    }
+    std::cout << "1. Crea contatto" << "\n2. Modifica contatto" << "\n3. Visualizza contatti" << "\n4. Elimina contatto" << "\n5. Esci\n";
 }
 
 std::vector<Contatto> createContact()
@@ -91,7 +69,7 @@ std::vector<Contatto> createContact()
     }
 }
 
-void modifyContact(Contatto &c)
+void modifyContact(std::vector<Contatto> &c)
 { // case 2
     std::cout << "\nCosa vuoi modificare?";
     std::cout << "\n1. Nome" << "\n2. Cognome" << "\n3. Età" << "\n4. Numero di telefono" << "\n5. Indirizzo" << "\n6. Numero civico";
@@ -165,11 +143,39 @@ void eliminateContact(std::vector<Contatto> &c) // case 4
     }
 }
 
+void getchoice()
+{
+    while (true)
+    {
+        int n;
+        std::cin >> n;
+        switch (n)
+        {
+        case 1:
+            c = createContact();
+            return;
+        case 2:
+            modifyContact(c);
+            return;
+        case 3:
+            displayContacts(c);
+            return;
+        case 4:
+            eliminateContact(c);
+            return;
+        case 5:
+            return;
+        default:
+            std::cout << "\nErrore: Opzione non valida.\n";
+        }
+    }
+}
+
 int main()
 {
-    displaymenu();
-    std::vector<Contatto> c = createContact();
-    displayContacts(c);
-    eliminateContact(c);
-    displayContacts(c);
+    while (true)
+    {
+        displaymenu();
+        getchoice();
+    }
 }
