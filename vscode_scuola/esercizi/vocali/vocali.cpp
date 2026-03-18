@@ -1,7 +1,5 @@
 #include <iostream>
 #include <string.h>
-<<<<<<< HEAD
-=======
 
 char listaParole[10][30]; // creo matrice globale che puo contenere 5 parole di lunghezza 30
 
@@ -62,4 +60,3 @@ int main()
 {
     printParole();
 }
->>>>>>> 5b422f803a1ca8ac6249f78c69c0f6f993097071
