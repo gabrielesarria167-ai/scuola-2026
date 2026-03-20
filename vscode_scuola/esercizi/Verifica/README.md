@@ -1,6 +1,6 @@
-#ESERCIZI VERIFICA DI GRIGOLINI
+# ESERCIZI VERIFICA DI GRIGOLINI
 
-***Richieste***
+## Richieste
 
 1)  funzione che data una parola sostituisce le vocali con * e consonanti con ?
     minuscole * e ?, maiuscole x e +
@@ -21,7 +21,7 @@
 
 ---
 
-**FUNZIONE 1**
+## FUNZIONE 1
 
 Questa funzione riceve una stringa input dall' utente, controlla tutti i caratteri che compongono la stringa e li sostituisce con dei valori encriptici.
 
@@ -68,7 +68,7 @@ CHIUDO FUNZIONE
 
 ---
 
-I sub-problemi sono:
+***SUB-PROBLEMI***
 
 - Creare una funzione _string riceviStringa()_ che riceve un input dall'utente e lo ritorna sottoforma di string
 
