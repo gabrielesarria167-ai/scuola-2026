@@ -1,4 +1,6 @@
-**ESERCIZI VERIFICA DI GRIGOLINI**
+#ESERCIZI VERIFICA DI GRIGOLINI
+
+***Richieste***
 
 1)  funzione che data una parola sostituisce le vocali con * e consonanti con ?
     minuscole * e ?, maiuscole x e +
@@ -17,9 +19,9 @@
 5)  funzione che divide le vocali e consonanti di una parola in due array
     eg: "gabriele" --> v1 = {a, i, e, e} v2 = {g, b, r, l}
 
+---
 
-
-*FUNZIONE 1*
+**FUNZIONE 1**
 
 Questa funzione riceve una stringa input dall' utente, controlla tutti i caratteri che compongono la stringa e li sostituisce con dei valori encriptici.
 
@@ -63,6 +65,8 @@ SE NO{
 }
 CHIUDO FUNZIONE   
 }
+
+---
 
 I sub-problemi sono:
 
