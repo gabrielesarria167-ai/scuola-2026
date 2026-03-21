@@ -6,7 +6,7 @@
     minuscole * e ?, maiuscole x e +
 
 2)  funzione che data una stringa inverte in maniera alternata le lettere del nome,
-    sostituendo solo lettere dispari con il loro simmetrico
+    sostituendo solo lettere pari con il loro simmetrico
 
     eg: busatto --> btstatuo
 
@@ -36,11 +36,11 @@ RITORNO Stringa
 
 }
 
-CREO funzione modificaLettere( riceviStringa() ){
+CREO funzione modificaLettere( stringa ){
 
 RICEVO stringa
 
-CHIAMO funzione che prende ogni carattere della stringa partendo dal primo, e verifica se è VOCALE o CONSONANTE
+CHIAMO funzione che prende ogni carattere della stringa partendo dal primo, e verifica se è VOCALE, CONSONANTE o ALTRO
 
 CHIAMO funzione che prende ogni carattere della stringa partendo dal primo, e verifica se è MAIUSCOLO o MINUSCOLO
 
@@ -78,3 +78,45 @@ CHIUDO FUNZIONE
 
 - Controllo dei valori di ritorno delle funzioni _isVocale()_ e _isMaiuscola()_ con degli if():
 se entrambe sono vere il carattere diventa x, se false diventa ?, se una è vera diventa o * o +
+
+---
+
+## FUNZIONE 2
+
+Questa funzione riceve una stringa input dall'utente, e scambia i caratteri pari della stringa con il loro simmetrico.
+
+Prima di tutto controlla se la stringa ha PARI caratteri o DISPARI, se sono pari dividi a meta normalmente:
+se sono dispari dividi a meta per eccesso (eg. meta di 7 = 4), salvo questo valore in una variabile _middleString_.
+
+Devi usare un ciclo for che aumenta fino ad essere uguale a _middleString_, dentro il for controlli se la posizione della lettera è pari o dispari, se è DISPARI niente se è PARI scambi (consigliato quindi di partire con i = 1)
+
+esempio del for sarebbe
+ ```cpp
+ for(int i = 1; i<=middleString; i++){
+    if(i%2 == 0){
+        scambio valore opposto
+    }
+ }
+```
+---
+
+Il diagramma è il seguente:
+
+RICEVO e SALVO stringa da riceviStringa()
+CREO funzione scambioParole(stringa){
+    INIZIALIZZO variabile middleString = 0;
+    SE la grandezza della stringa è PARI{
+        ALLORA middleString equivale alla grandezza diviso 2
+    }
+    SE NO{
+        ALLORA middleString equivale alla grandezza diviso 2, tutto +1
+    }
+    FINO A QUANDO (i parte da 1, i minore di middlestring, i aumenta di 1){
+        SE i è PARI{
+            ALLORA scambio lettera in posizione i con lettera in posizione finale - i
+        }
+    }
+    RITORNO stringa;
+}
+
+ 
