@@ -103,6 +103,7 @@ esempio del for sarebbe
 Il diagramma è il seguente:
 
 RICEVO e SALVO stringa da riceviStringa()
+
 CREO funzione scambioParole(stringa){
     INIZIALIZZO variabile middleString = 0;
     SE la grandezza della stringa è PARI{
@@ -119,4 +120,39 @@ CREO funzione scambioParole(stringa){
     RITORNO stringa;
 }
 
- 
+---
+
+## FUNZIONE 4
+
+Questa funzione riceve una stringa input dall'utente, la salva e per ogni carattere lo rende encriptato usando la funzione _modificaIniziale()_, si salva la sua posizione nell'alfabeto (eg. a = 1, c = 3), e li stampa insieme.
+
+---
+
+Il diagramma concettuale è il seguente:
+
+CREO funzione modificaFinale(stringa parola)
+
+RICEVO e SALVO stringa parola 
+
+INIZIALIZZO variabile parolaEncriptata
+
+SALVO il valore di modificaIniziale(parola) in parolaEncriptata
+
+INIZIALIZZO variabile stringa parolaFinale = ""
+
+CREO FUNZIONE posizioneAlfabetica(carattere in parola), restituisce la posizione alfabetica sottoforma di stringa della lettera se ci appartiene, se non ci appartiene resistuisce ""
+
+FINO A QUANDO(i parte da 0, i minore della grandezza di parola, i aumenta di 1){
+    AGGIUNGO a parolaFinale il valore di _posizionelfabetica(carattere i in parola)_ usando +=
+    AGGIUNGO a parolaFinale il carattere i di parolaEncriptata usando +=
+}
+
+RITORNO parolaFinale
+
+---
+
+***SUB-PROBLEMI***
+
+- Creare funzione posizioneAlfabetica che riceve un carattere e ne ritorna la sua posizione alfabetica, "" se non appartiene all' alfabeto
+
+- Ciclo for in cui aggiungo a parolaFinale la posizioneAlfabetica del singolo carattere con il carattere encriptato
