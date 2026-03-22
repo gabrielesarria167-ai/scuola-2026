@@ -1,7 +1,7 @@
 # ESERCIZI VERIFICA DI GRIGOLINI
 
->[IMPORTANTE]
->Se ci sono esercizi mancanti, o qualcuno non funziona, ditemelo
+>[!IMPORTANT]
+>Se ci sono esercizi mancanti, o qualcuno non funziona, ditemelo.
 
 
 ## Richieste
