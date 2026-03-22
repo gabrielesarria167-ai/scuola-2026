@@ -1,5 +1,9 @@
 # ESERCIZI VERIFICA DI GRIGOLINI
 
+>[IMPORTANTE]
+>Se ci sono esercizi mancanti, o qualcuno non funziona, ditemelo
+
+
 ## Richieste
 
 1)  funzione che data una parola sostituisce le vocali con * e consonanti con ?
