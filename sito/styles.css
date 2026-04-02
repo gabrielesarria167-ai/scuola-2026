@@ -10,7 +10,11 @@ body{
 
 /* HEADER */
 .header{
-    background-color: #100C08;
+    background: rgba(83, 81, 81, 0.4);
+    backdrop-filter: blur(17px) saturate(50%);
+    border: 1px solid rgba(0,0,0,0.045);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     box-sizing: border-box;
     padding: 10px;
     height: 10vh;
@@ -22,14 +26,12 @@ body{
 }
 
 .header .links{
-    display: flex;
-    padding:0;
-    margin:0;
-    width: 35%;
-    align-self: center;
     box-sizing: border-box;
+    display: flex;
+    padding: 3px;
+    margin:0;
+    align-self: center;
     min-width: 190px;
-    max-width: 482px;
     gap: 10px;
     margin-right: 15px;
 }
@@ -39,6 +41,7 @@ body{
     list-style: none;
     text-align: center;
     font-weight: bold;
+    align-self: center;
 }
 
 .links a{
@@ -51,8 +54,9 @@ body{
 }
 
 /* HERO CONTENT */
+
 .bio{
-    color: rgb(32, 175, 32);
+    color:rgba(50, 235, 17, 0.4)
 }
 
 .hero-content{
@@ -70,23 +74,37 @@ body{
     display: flex;
     flex-direction: column;
 }
-.rightside{
-    border: 2px solid white;
-    flex: 1 2 30%;
-}
-.leftside h1{
+.leftside h1, .leftside p{
     margin:0;
     font-size: 5em;
+    background-image: url(plasticBg.jpeg);
+    color:rgba(238, 228, 228, 0.414);
+    background-clip: text;
+    animation: bgMove 15s linear infinite;
 }
+@keyframes bgMove{
+    0%{
+        background-position: -50%;
+    }
+    50%{
+        background-position: 100%;
+    }
+    100%{
+        background-position: 0%;
+    }
+}
+
+
 .leftside p{
     margin-top: 10px;
-    color: #777676;
+    color: rgba(232, 241, 232, 0.558);
     font-size: 1.5em;
 }
 
 /* CARD CONTENT */
 
 .card-content{
+    background-color: rgb(0,0,0);
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
@@ -119,5 +137,6 @@ body{
     display: flex;
     flex-direction: column;
 }
+
 
 
